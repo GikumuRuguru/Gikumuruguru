@@ -1,0 +1,32 @@
+class Bank_Account:
+    def __init__(self):
+        self.balance=0.0
+
+        print("Hello!!! Welcome!you can deposit or withdraw funds here!")
+ 
+    def deposit(self):
+        amount=float(input("Enter amount to be Deposited: "))
+        self.balance += amount
+        print("\n Amount Deposited:",amount)
+ 
+    def withdraw(self):
+        amount = float(input("Enter amount to be Withdrawn: "))
+        if self.balance>=amount:
+            self.balance-=amount
+            print("\n Successful withdrawal!:", amount)
+        else:
+            print("\n Penalty=$10")        
+
+    def addinterest(self):
+        interest = float(input("Enter the monthly interest rate(in percent): "))
+    
+
+    def display(self):
+        print("\n Net Available Balance=",self.balance)
+
+B = Bank_Account()
+  
+B.deposit()
+B.withdraw()
+B.addinterest()
+B.display()
